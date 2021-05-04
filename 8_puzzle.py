@@ -111,6 +111,7 @@ def a_star_search(initial_state, frontier, explored):
     while not is_goal_state(current_board.state):
         for board in frontier:
             current_board = frontier[0]
+            # if board has lower value than current, replace current with with that
             if (board.f < current_board.f):
                 current_board = board
         # shuffle board for all branch configurations in frontier
